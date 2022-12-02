@@ -49,11 +49,12 @@ namespace Interactive_Fiction
         static bool gameEnded = false;
         static void Main(string[] args)
         {
-            start_game();
-            game_loop(page1);
+            start_game(); // starts the game
+            game_loop(page1); // displays page 1
             while (!gameEnded)
             {
-                choose_page();
+                choose_page(); // after the page ends, choose_page() will choose another page depending on what the user inputted
+                // if it is the last page, gameEnded is set to true and the while loop breaks
             }            
             Console.ReadKey();
         }
